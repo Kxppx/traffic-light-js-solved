@@ -1,0 +1,14 @@
+.active-green {
+  background-color: green;
+  box-shadow: 0 0 100px green;
+}
+
+.active-yellow {
+  background-color: yellow;
+  box-shadow: 0 0 100px yellow;
+}
+
+.active-red {
+  background-color: red;
+  box-shadow: 0 0 100px red;
+}
