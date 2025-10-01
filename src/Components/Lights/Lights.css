@@ -10,11 +10,3 @@
   background-color: grey;
   box-shadow: 0 0 30px black;
 }
-
-.circle {
-  border: 2px solid black;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: rgb(0, 0, 0, 0.6);
-}
