@@ -11,4 +11,4 @@ I hope you read this🤞<br>
 
 1. Is it bad practice to link a component's css file to multiple components?
 
-2. In this case would it have been better to import the data and pass it as props to both Components?
+2. In this case would it have been better to import the data into `App.jsx` and pass it as props to both Components?
