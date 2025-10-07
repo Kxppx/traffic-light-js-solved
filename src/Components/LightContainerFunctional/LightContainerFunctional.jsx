@@ -1,25 +1,19 @@
 import { useState } from "react";
 import { Lights } from "../Lights/Lights";
-import { lightsData } from "../../data/lights";
+import { arrLights } from "../../data/lights";
 import "./LightContainerFunctional.css";
 
 export const LightContainerFunctional = ({ title }) => {
-  const [currentIndex, setCurrentIndex] = useState(2);
-  const [lights, setLights] = useState(lightsData);
+  const [currentIndex, setCurrentIndex] = useState(arrLights.length - 1);
   const changeLight = () => {
-    setLights(
-      lights.map((light, i) => {
-        return i === currentIndex
-          ? { ...light, active: true }
-          : { ...light, active: false };
-      })
+    setCurrentIndex(
+      currentIndex === 0 ? arrLights.length - 1 : currentIndex - 1
     );
-    setCurrentIndex(currentIndex === 0 ? 2 : currentIndex - 1);
   };
   return (
     <div className="light-container">
       <h2>{title}</h2>
-      <Lights data={lights} />
+      <Lights data={arrLights} activeColorIndex={currentIndex} />
       <button onClick={changeLight}>Change light</button>
     </div>
   );
